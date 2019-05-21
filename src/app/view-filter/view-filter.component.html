@@ -1,0 +1,11 @@
+<div style="text-align:center">
+    <h2>Select view based on</h2>
+    <mat-form-field>
+        <mat-label>View type</mat-label>
+        <mat-select (selectionChange)="filterChanged($event.value)">
+            <mat-option *ngFor="let type of types" [value]="type.value">
+                {{type.label}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
